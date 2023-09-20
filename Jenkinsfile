@@ -13,7 +13,7 @@ pipeline {
 	stages {
 		stage("test: baseline (jdk17)") {
 			agent {
-			    label 'docker' {
+			    docker {
 					image 'adoptopenjdk/openjdk17:latest'
 					args '-v $HOME/.m2:/tmp/jenkins-home/.m2'
 				}
